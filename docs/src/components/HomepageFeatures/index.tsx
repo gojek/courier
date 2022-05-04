@@ -6,11 +6,12 @@ type FeatureItem = {
   title: string;
   Svg: React.ComponentType<React.ComponentProps<'svg'>>;
   description: JSX.Element;
+  link: string;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: 'Courier-GO',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
@@ -18,9 +19,10 @@ const FeatureList: FeatureItem[] = [
         used to get your website up and running quickly.
       </>
     ),
+    link: 'https://github.com/gojek/courier-go'  
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Courier-Android',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
@@ -28,9 +30,10 @@ const FeatureList: FeatureItem[] = [
         ahead and move your docs into the <code>docs</code> directory.
       </>
     ),
+    link: 'https://github.com/gojek/courier-android'
   },
   {
-    title: 'Powered by React',
+    title: 'Courier-iOS',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
@@ -38,20 +41,25 @@ const FeatureList: FeatureItem[] = [
         be extended while reusing the same header and footer.
       </>
     ),
+    link: 'https://github.com/gojek/courier-iOS'
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, Svg, description, link}: FeatureItem) {
   return (
+    
     <div className={clsx('col col--4')}>
+      <a href={link}>
       <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>
+      </a>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
     </div>
+    
   );
 }
 

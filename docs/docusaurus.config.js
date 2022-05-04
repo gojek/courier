@@ -58,8 +58,8 @@ const config = {
             title: 'Platforms',
             items: [
               { label: 'Golang', href: 'https://github.com/gojek/courier-go' },
-              { label: 'Android', href: 'https://github.com/gojekfarm/courier-android' },
-              { label: 'iOS', href: 'https://github.com/gojekfarm/courier-iOS' },
+              { label: 'Android', href: 'https://github.com/gojek/courier-android' },
+              { label: 'iOS', href: 'https://github.com/gojek/courier-iOS' },
             ],
           },
           {
