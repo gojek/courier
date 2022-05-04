@@ -20,7 +20,7 @@ jobs:
          node-version: '18.x'
       - name: Test Build
         run: |
-          cd website
+          cd docs
           if [-e yarn.lock ]; then
           yarn install --frozen-lockfile
           elif [-e package.json ]; then
