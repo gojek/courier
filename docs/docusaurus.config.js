@@ -9,7 +9,7 @@ const config = {
   title: 'Courier',
   tagline: 'Information Superhighway',
   url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/courier-docs/',
+  baseUrl: '/courier/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
