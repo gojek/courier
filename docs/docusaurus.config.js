@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Courier',
-  tagline: 'Information SuperHighway',
+  tagline: 'Information Superhighway',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/courier-docs/',
   onBrokenLinks: 'warn',
@@ -51,6 +51,7 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
+          {to: '#docs', label: 'Docs', position: 'left'},
           {to: '/blog', label: 'Blog', position: 'left'},
         ],
       },

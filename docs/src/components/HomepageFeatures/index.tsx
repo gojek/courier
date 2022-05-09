@@ -15,8 +15,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/logo-golang.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Go package for creating long running connection using MQTT protocol
       </>
     ),
     link: 'https://github.com/gojek/courier-go'  
@@ -26,8 +25,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/logo-android.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Android library for creating long running connection using MQTT protocol
       </>
     ),
     link: 'https://github.com/gojek/courier-android'
@@ -37,8 +35,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/logo-ios.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        iOS library for creating long running connection using MQTT protocol
       </>
     ),
     link: 'https://github.com/gojek/courier-iOS'
@@ -47,19 +44,16 @@ const FeatureList: FeatureItem[] = [
 
 function Feature({title, Svg, description, link}: FeatureItem) {
   return (
-    
     <div className={clsx('col col--4')}>
-      <a href={link}>
       <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>
-      </a>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>
         <p>{description}</p>
+        <a className="button" href={link} target="_blank">Documentation</a>
       </div>
     </div>
-    
   );
 }
 

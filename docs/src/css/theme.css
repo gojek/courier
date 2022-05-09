@@ -31,10 +31,12 @@
     --main-bg-color: var(--ifm-color-primary);
     --light-bg-color: transparent;
     --dark-bg-color: #F8F6F0;
+    --button-color: black;
   }
 
   html[data-theme="dark"] {
     --main-bg-color: var(--ifm-color-primary);
     --light-bg-color: transparent;
     --dark-bg-color:#131313;
+    --button-color: white;
   }

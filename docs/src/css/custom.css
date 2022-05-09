@@ -162,3 +162,13 @@
   height: 30px;
   margin: 2em;
 }
+
+.button {
+  color: var(--button-color);
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: var(--light-bg-color);
+  color: var(--button-color);
+}

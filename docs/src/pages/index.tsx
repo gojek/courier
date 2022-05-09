@@ -41,37 +41,31 @@ export default function Home(): JSX.Element {
         <Container className="textSection wrapper" background="dark">
           <h1>Key Features</h1>
           <p>
-            Stream processing platform for transforming, aggregating and enriching
-            data in real-time mode with ease of operation & unbelievable reliability.
-            Dagger can deployd in VMs or cloud-native environment to makes resource provisioning and deployment
-            simple & straight-forward, the only limit to your data processing is your imagination.
+            Courier provides a mechanism for creating long running connection on mobile applications and backend services using MQTT protocol
           </p>
           <GridBlock
             contents={[
               {
-                title: 'Aggregations',
+                title: 'Quality of Service',
                 content: (
                   <div>
-                    Supports Tumble & Slide for time-windows. Longbow feature
-                    supports large windows upto 30-day.
+                    Supports three QoS delivery levels: 0 (atmost once), 1 (atleast once) and 2 (exactly once)
                   </div>
                 ),
               },
               {
-                title: 'SQL Support',
+                title: 'Clean API',
                 content: (
                   <div>
-                    Query writing made easy through formatting, suggestions,
-                    auto-completes and template queries.
+                    Provides clean API for connect / disconnect, subscribe / unsubscribe and publish / receive functionalities
                   </div>
                 ),
               },
               {
-                title: 'Stream Enrichment',
+                title: 'Automatic Reconnect',
                 content: (
                   <div>
-                    Enrich Kafka messages from HTTP endpoints or database sources to bring
-                    offline & reference data context to real-time processing.
+                    Automatically reconnects in case of network or other unexpected failures
                   </div>
                 ),
               },
@@ -79,33 +73,32 @@ export default function Home(): JSX.Element {
                 title: 'Observability',
                 content: (
                   <div>
-                    Always know what’s going on with your deployment with built-in monitoring
-                    of throughput, response times, errors and more.
+                    Provides events for tracking end-to-end delivery
                   </div>
                 ),
               },
               {
-                title: 'Analytics Ecosystem',
+                title: 'Flexible Encoder/Decoder support',
                 content: (
                   <div>
-                    Dagger can transform, aggregate, join and enrich data in real-time
-                    for operational analytics using InfluxDB, Grafana and others.
+                    Converts message payload to and from any custom message type
                   </div>
                 ),
               },
               {
-                title: 'Stream Transformations',
+                title: 'Open Source',
                 content: (
                   <div>
-                    Convert Kafka messages on the fly for a variety of
-                    use-cases such as feature engineering.
+                    Open-source client libraries for GoLang, Android & iOS
                   </div>
                 ),
               },
             ]}
           />
         </Container>
-        <HomepageFeatures />
+        <div id="docs">
+          <HomepageFeatures />
+        </div>
       </main>
     </Layout>
   );
