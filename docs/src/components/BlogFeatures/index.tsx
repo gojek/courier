@@ -89,23 +89,20 @@ const BlogList: BlogItem[] = [
 
 function Feature({title, imageUrl, description, link, date, readTimeMinutes}: FeatureItem) {
   return (
-    <div className="text--center">
-        <a href={link} class="post">
-           <div class="card border-0 bg-transparent">
-              <div className={styles.featureSvg}>
-                <img src={imageUrl}/>
-              </div>
-              <div class="card-body px-0">
-                 <h5 class=" title">{title}</h5>
-                 <p class=" description">{description}</p>
-                 <div class="mt-3 meta">
-                    <p class="mb-0 author"></p>
-                    <p class="date-time">{date} | {readTimeMinutes} min read</p>
-                 </div>
-              </div>
-           </div>
-        </a>
-    </div>
+    <a href={link} class="post">
+       <div class="card border-0 bg-transparent">
+          <div className={styles.featureSvg}>
+            <img src={imageUrl}/>
+          </div>
+          <div className="text--center padding-horiz--md">
+            <h5 class=" title">{title}</h5>
+            <p class=" description">{description}</p>
+          </div>
+          <div className="padding-horiz--md">
+            <p class="date-time">{date} | {readTimeMinutes} min read</p>
+          </div>
+       </div>
+    </a>
   );
 }
 

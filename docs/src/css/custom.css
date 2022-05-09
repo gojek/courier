@@ -164,13 +164,13 @@
 }
 
 .button {
-  color: var(--button-color);
+  color: var(--text-color);
   transition-duration: 0.4s;
 }
 
 .button:hover {
   background-color: var(--light-bg-color);
-  color: var(--button-color);
+  color: var(--text-color);
 }
 
 .homeHero .button {
