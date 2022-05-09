@@ -172,3 +172,8 @@
   background-color: var(--light-bg-color);
   color: var(--button-color);
 }
+
+.homeHero .button {
+  color: white;
+  border: solid 1px #fff;
+}
