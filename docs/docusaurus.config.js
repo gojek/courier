@@ -13,7 +13,7 @@ const config = {
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'anubhav7nov', // Usually your GitHub org/user name.
+  organizationName: 'gojek', // Usually your GitHub org/user name.
   projectName: 'courier-docs', // Usually your repo name.
 
   presets: [
