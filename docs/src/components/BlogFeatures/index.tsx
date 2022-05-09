@@ -89,7 +89,7 @@ const BlogList: BlogItem[] = [
 
 function Feature({title, imageUrl, description, link, date, readTimeMinutes}: FeatureItem) {
   return (
-    <a href={link} class="post">
+    <a href={link} class="post" target="_blank">
        <div class="card border-0 bg-transparent">
           <div className={styles.featureSvg}>
             <img src={imageUrl}/>
