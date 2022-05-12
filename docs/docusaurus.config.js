@@ -12,7 +12,7 @@ const config = {
   baseUrl: '/courier/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/courier-logo.ico',
   organizationName: 'gojek', // Usually your GitHub org/user name.
   projectName: 'courier-docs', // Usually your repo name.
 
@@ -48,7 +48,7 @@ const config = {
       navbar: {
         title: 'Courier',
         logo: {
-          src: 'img/logo.svg',
+          src: 'img/courier-logo.svg',
         },
         items: [
           {to: '/blog', label: 'Blog', position: 'left'},
