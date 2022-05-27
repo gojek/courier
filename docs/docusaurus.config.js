@@ -52,6 +52,7 @@ const config = {
         },
         items: [
           {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/#docs', label: 'Libraries', position: 'left'},
         ],
       },
       footer: {
