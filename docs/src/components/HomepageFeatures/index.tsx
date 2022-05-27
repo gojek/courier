@@ -18,7 +18,7 @@ const FeatureList: FeatureItem[] = [
         Go package for creating long running connection using MQTT protocol
       </>
     ),
-    link: 'https://github.com/gojek/courier-go'  
+    link: 'https://gojek.github.io/courier-go/'
   },
   {
     title: 'Courier-Android',
@@ -28,7 +28,7 @@ const FeatureList: FeatureItem[] = [
         Android library for creating long running connection using MQTT protocol
       </>
     ),
-    link: 'https://github.com/gojek/courier-android'
+    link: 'https://gojek.github.io/courier-android/'
   },
   {
     title: 'Courier-iOS',
@@ -38,7 +38,7 @@ const FeatureList: FeatureItem[] = [
         iOS library for creating long running connection using MQTT protocol
       </>
     ),
-    link: 'https://github.com/gojek/courier-iOS'
+    link: 'https://gojek.github.io/courier-iOS/'
   },
 ];
 
