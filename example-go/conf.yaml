@@ -1,0 +1,9 @@
+HOST: "broker.emqx.io"
+PORT: 1883
+USERNAME: "COURIER"
+KEEPALIVE: 15s
+WRITE_TIMEOUT: 15s
+AUTO_RECONNECT: true
+
+PUBLISH_TOPIC: "topic/publish"
+SUBSCRIBE_TOPIC: "topic/subscribe"
