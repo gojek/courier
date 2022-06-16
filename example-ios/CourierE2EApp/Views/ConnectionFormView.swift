@@ -36,7 +36,7 @@ struct ConnectionFormView: View {
     
     var footerText: String {
         if formFlow == .courierE2E {
-            return "In E2E flow, you need to provide the username and room code to connect"
+            return "In E2E flow, you need to provide the username and room code to connect. Subscription will be made to \"chat/{room_code}/receive\" topic and published message will be send to \"chat/{username}/send\" topic"
         } else {
             return "Standard MQTT Flow"
         }
