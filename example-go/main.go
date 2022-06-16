@@ -23,7 +23,7 @@ var (
 	brokerHost string
 	brokerPort int
 
-	cfg        config.Config
+	cfg config.Config
 )
 
 func init() {
@@ -73,11 +73,12 @@ func subscribeHandler(ctx context.Context, c courier.PubSub, message *courier.Me
 
 	log.Printf("Message received: %+v\n", msg)
 
-	go PublishMessage(ctx, c, msg)
+	go publishMessage(ctx, c, msg)
 }
 
-func PublishMessage(ctx context.Context, c courier.PubSub, msg imsg.Message) {
+func publishMessage(ctx context.Context, c courier.PubSub, msg imsg.Message) {
 	if err := c.Publish(ctx, fmt.Sprintf(publishTopicFmt, msg.To), msg, courier.QOSOne); err != nil {
 		log.Printf("Failed to publish message: %+v", msg)
 	}
+	log.Printf("Successfully published message: %+v", msg)
 }
