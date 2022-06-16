@@ -67,6 +67,12 @@ const config = {
             ],
           },
           {
+            title: 'Community',
+            items: [
+              { label: 'Discord', href: 'https://discord.gg/C823qK4AK7', },
+            ],
+          },
+          {
             title: 'Resources',
             items: [
               { label: 'Blog', to: '/blog', },
