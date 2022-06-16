@@ -1,43 +1,48 @@
 package main
 
 import (
-	"bufio"
 	"context"
 	"flag"
 	"fmt"
 	"log"
 	"os"
 	"os/signal"
-	"strings"
 
 	"github.com/gojek/courier-go"
 
 	"example-go/config"
-	"example-go/decoder"
+	imsg "example-go/message"
 )
 
-var subscriptionTopic string
-var publishTopic string
-var cfg config.Config
+const (
+	subscriptionTopic = "chat/+/send"
+	publishTopicFmt   = "chat/%s/receive"
+)
+
+var (
+	brokerHost string
+	brokerPort int
+
+	cfg        config.Config
+)
 
 func init() {
 	cfg = config.Cfg()
 
-	flag.StringVar(&subscriptionTopic, "s", cfg.SubscribeTopic, "Subscription topic")
-	flag.StringVar(&publishTopic, "p", cfg.PublishTopic, "Publish topic")
+	flag.StringVar(&brokerHost, "h", cfg.Host, "Broker Host")
+	flag.IntVar(&brokerPort, "p", cfg.Port, "Broker Port")
 }
 
 func main() {
 	flag.Parse()
 
 	opts := []courier.ClientOption{
-		courier.WithTCPAddress(cfg.Host, uint16(cfg.Port)),
+		courier.WithTCPAddress(brokerHost, uint16(brokerPort)),
 		courier.WithUsername(cfg.Username),
 		courier.WithPassword(cfg.Password),
 		courier.WithKeepAlive(cfg.KeepAlive),
 		courier.WithWriteTimeout(cfg.WriteTimeout),
 		courier.WithAutoReconnect(cfg.Autoreconnect),
-		courier.WithCustomDecoder(decoder.DecoderFunc),
 	}
 
 	client, err := courier.NewClient(opts...)
@@ -49,10 +54,9 @@ func main() {
 		log.Fatal(err)
 	}
 
-	if err := client.Subscribe(context.Background(), subscriptionTopic, subscribeHandler); err != nil {
+	if err := client.Subscribe(context.Background(), subscriptionTopic, subscribeHandler, courier.QOSOne); err != nil {
 		log.Fatal(err)
 	}
-	go publishLoop(client)
 
 	ch := make(chan os.Signal)
 	signal.Notify(ch, os.Interrupt, os.Kill)
@@ -60,25 +64,20 @@ func main() {
 	<-ch
 }
 
-func publishLoop(c *courier.Client) {
-	reader := bufio.NewReader(os.Stdin)
-
-	for {
-		fmt.Print("-> ")
-		text, _ := reader.ReadString('\n')
-		// convert CRLF to LF
-		text = strings.Replace(text, "\n", "", -1)
-		if err := c.Publish(context.Background(), publishTopic, text); err != nil {
-			log.Println(err)
-		}
-
-	}
-}
-
-func subscribeHandler(_ context.Context, _ courier.PubSub, message *courier.Message) {
-	var msg string
+func subscribeHandler(ctx context.Context, c courier.PubSub, message *courier.Message) {
+	var msg imsg.Message
 	if err := message.DecodePayload(&msg); err != nil {
 		log.Println(err)
+		return
 	}
-	fmt.Printf("Message received: %v\n", msg)
+
+	log.Printf("Message received: %+v\n", msg)
+
+	go PublishMessage(ctx, c, msg)
+}
+
+func PublishMessage(ctx context.Context, c courier.PubSub, msg imsg.Message) {
+	if err := c.Publish(ctx, fmt.Sprintf(publishTopicFmt, msg.To), msg, courier.QOSOne); err != nil {
+		log.Printf("Failed to publish message: %+v", msg)
+	}
 }

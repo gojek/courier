@@ -16,9 +16,6 @@ type Config struct {
 	KeepAlive     time.Duration `yaml:"KEEPALIVE"`
 	WriteTimeout  time.Duration `yaml:"WRITE_TIMEOUT"`
 	Autoreconnect bool          `yaml:"AUTO_RECONNECT"`
-
-	PublishTopic   string `yaml:"PUBLISH_TOPIC"`
-	SubscribeTopic string `yaml:"SUBSCRIBE_TOPIC"`
 }
 
 func Cfg() Config {
