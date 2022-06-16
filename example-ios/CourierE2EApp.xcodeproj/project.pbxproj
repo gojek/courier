@@ -16,6 +16,8 @@
 		B00C8232285AEAC500B2BDBA /* ConnectionFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00C8230285AEAC500B2BDBA /* ConnectionFormView.swift */; };
 		B00C8233285AEAC500B2BDBA /* ConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00C8231285AEAC500B2BDBA /* ConnectionView.swift */; };
 		B00C8236285AEACB00B2BDBA /* ConnectionServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00C8235285AEACB00B2BDBA /* ConnectionServiceProvider.swift */; };
+		B00C8239285B096C00B2BDBA /* ConnectionE2EView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00C8238285B096C00B2BDBA /* ConnectionE2EView.swift */; };
+		B00C823B285B0BAB00B2BDBA /* ConnectionE2EObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00C823A285B0BAB00B2BDBA /* ConnectionE2EObservableObject.swift */; };
 		D105750EEFE519613089F28C /* Pods_CourierE2EApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD2EA20DA74FF6F88623C776 /* Pods_CourierE2EApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +34,8 @@
 		B00C8230285AEAC500B2BDBA /* ConnectionFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionFormView.swift; sourceTree = "<group>"; };
 		B00C8231285AEAC500B2BDBA /* ConnectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionView.swift; sourceTree = "<group>"; };
 		B00C8235285AEACB00B2BDBA /* ConnectionServiceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionServiceProvider.swift; sourceTree = "<group>"; };
+		B00C8238285B096C00B2BDBA /* ConnectionE2EView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionE2EView.swift; sourceTree = "<group>"; };
+		B00C823A285B0BAB00B2BDBA /* ConnectionE2EObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionE2EObservableObject.swift; sourceTree = "<group>"; };
 		FE766D1495216F543ECE56C9 /* Pods-CourierE2EApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CourierE2EApp.debug.xcconfig"; path = "Target Support Files/Pods-CourierE2EApp/Pods-CourierE2EApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				B00C822D285AEABF00B2BDBA /* ConnectionObservableObject.swift */,
+				B00C823A285B0BAB00B2BDBA /* ConnectionE2EObservableObject.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 			children = (
 				B00C8230285AEAC500B2BDBA /* ConnectionFormView.swift */,
 				B00C8231285AEAC500B2BDBA /* ConnectionView.swift */,
+				B00C8238285B096C00B2BDBA /* ConnectionE2EView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -253,8 +259,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B00C822A285AEAB800B2BDBA /* MesssageData.swift in Sources */,
+				B00C8239285B096C00B2BDBA /* ConnectionE2EView.swift in Sources */,
 				B00C8232285AEAC500B2BDBA /* ConnectionFormView.swift in Sources */,
 				B00C8233285AEAC500B2BDBA /* ConnectionView.swift in Sources */,
+				B00C823B285B0BAB00B2BDBA /* ConnectionE2EObservableObject.swift in Sources */,
 				B00C822B285AEAB800B2BDBA /* SubscribeData.swift in Sources */,
 				B00C821A285AE8B000B2BDBA /* CourierE2EApp.swift in Sources */,
 				B00C8236285AEACB00B2BDBA /* ConnectionServiceProvider.swift in Sources */,
