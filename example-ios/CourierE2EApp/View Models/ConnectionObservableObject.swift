@@ -51,10 +51,11 @@ final class ConnectionObservableObject: ObservableObject {
                 messageCleanupInterval: 10
             )
         )
+        self.courierClient.addEventHandler(self)
     }
     
-    func connect() { 
-        courierClient.connect() 
+    func connect() {
+        courierClient.connect()
         courierClient.connectionStatePublisher
             .sink { [weak self] in
                 self?.handleConnectionStateEvent($0)
@@ -155,3 +156,20 @@ final class ConnectionObservableObject: ObservableObject {
         }
     }
 }
+
+extension ConnectionObservableObject: ICourierEventHandler {
+    
+    func onEvent(_ event: CourierEvent) {
+        switch event {
+        case .connectionSuccess:
+            if connectionServiceProvider.isCleanSession {
+                subscriptionList.forEach {
+                    courierClient.subscribe(($0.topic, QoS(rawValue: $0.qos) ?? .zero))
+                }
+            }
+        default: break
+        }
+    }
+    
+}
+
