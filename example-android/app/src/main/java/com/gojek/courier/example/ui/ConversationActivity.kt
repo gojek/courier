@@ -8,6 +8,7 @@ import com.gojek.courier.example.R
 import com.gojek.courier.example.data.ChatService
 import com.gojek.courier.example.data.model.ChatMessage
 import com.gojek.courier.example.ui.adapter.ConversationAdapter
+import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import kotlinx.android.synthetic.main.activity_conversation.conversation
 import kotlinx.android.synthetic.main.activity_conversation.messageText
@@ -40,8 +41,10 @@ class ConversationActivity : AppCompatActivity() {
             messageText.text = null
         }
 
-        disposable = chatService.receive(roomCode).subscribe { message ->
-            conversationAdapter.updateMessageList(message)
+        disposable = chatService.receive(roomCode)
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe { message ->
+                conversationAdapter.updateMessageList(message)
         }
     }
 
