@@ -79,6 +79,7 @@ func subscribeHandler(ctx context.Context, c courier.PubSub, message *courier.Me
 func publishMessage(ctx context.Context, c courier.PubSub, msg imsg.Message) {
 	if err := c.Publish(ctx, fmt.Sprintf(publishTopicFmt, msg.To), msg, courier.QOSOne); err != nil {
 		log.Printf("Failed to publish message: %+v", msg)
+		return
 	}
 	log.Printf("Successfully published message: %+v", msg)
 }
