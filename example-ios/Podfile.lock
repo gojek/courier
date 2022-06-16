@@ -1,0 +1,41 @@
+PODS:
+  - CourierCore (0.0.5)
+  - CourierMQTT (0.0.5):
+    - CourierCore (= 0.0.5)
+    - MQTTClientGJ (= 0.0.5)
+    - ReachabilitySwift (= 5.0.0)
+  - CourierProtobuf (0.0.5):
+    - CourierCore (= 0.0.5)
+    - CourierMQTT (= 0.0.5)
+    - SwiftProtobuf
+  - MQTTClientGJ (0.0.5)
+  - ReachabilitySwift (5.0.0)
+  - SwiftProtobuf (1.19.0)
+
+DEPENDENCIES:
+  - CourierCore (= 0.0.5)
+  - CourierMQTT (= 0.0.5)
+  - CourierProtobuf (= 0.0.5)
+  - ReachabilitySwift (= 5.0.0)
+  - SwiftProtobuf
+
+SPEC REPOS:
+  trunk:
+    - CourierCore
+    - CourierMQTT
+    - CourierProtobuf
+    - MQTTClientGJ
+    - ReachabilitySwift
+    - SwiftProtobuf
+
+SPEC CHECKSUMS:
+  CourierCore: ccdb483aeacee0c792f94944ea34d8c912cf1f46
+  CourierMQTT: a7fc650766f155a14383e54d0b1affb25ba1760b
+  CourierProtobuf: 7592f7844550dd564434e7f0f98b273a67c5ac6a
+  MQTTClientGJ: 8e44a1809c23f6a92a5dddd1fd7e00e3b85899ef
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  SwiftProtobuf: 6ef3f0e422ef90d6605ca20b21a94f6c1324d6b3
+
+PODFILE CHECKSUM: 705ebe12e875a3bca52a945eb8b1288ca63bb4d9
+
+COCOAPODS: 1.11.3
