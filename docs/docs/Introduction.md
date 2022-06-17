@@ -16,6 +16,8 @@ In this example, we are going to use Courier library for all client(Android & iO
 
 ## Flow Diagram
 
+![Diagram](../static/img/tutorial/flow-diagram.png)
+
 Client app(Android or iOS) will connect to the MQTT broker by passing the following information:
 
 - MQTT Broker IP & Port
@@ -31,7 +33,5 @@ Backend application subscribes to the topic - `chat/+/send`, in order to listen 
 Once the backend application receives a message on the above topic, it parses the message payload and publishes the message on the topic subscribed by the client applications.
 
 Message payload format: `{"from":{sender-username},"message":{text-message},"to":{room-code}}`
-
-![Diagram](../static/img/tutorial/flow-diagram.png)
 
 [1]: https://www.hivemq.com/blog/mqtt-essentials-part-5-mqtt-topics-best-practices/
