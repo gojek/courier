@@ -85,12 +85,20 @@ const config = {
               { label: 'Twitter', href: 'https://twitter.com/gojektech', },
             ],
           },
+          {
+            title: 'More',
+            items: [
+              { label: 'E2E example', to: '/docs/Introduction', },
+              { label: 'Blogs', to: '/blog', },
+              { label: 'Github', href: 'https://github.com/gojek/courier', },
+            ],
+          },
         ],
         logo: {
           alt: 'Gojek Open Source Logo',
           src: 'img/gojek-logo-white.png',
           width: 250,
-          height: 50,
+          height: 35,
           href: 'https://github.com/gojek/',
         },
         copyright: `Copyright © ${new Date().getFullYear()} Gojek`,
