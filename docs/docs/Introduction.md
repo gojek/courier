@@ -1,4 +1,4 @@
-# Tutorial
+# End-to-end chat example
 
 This tutorial will help you set up an end-to-end chat application for sending and receiving messages using the MQTT protocol.
 
@@ -31,5 +31,7 @@ Backend application subscribes to the topic - `chat/+/send`, in order to listen 
 Once the backend application receives a message on the above topic, it parses the message payload and publishes the message on the topic subscribed by the client applications.
 
 Message payload format: `{"from":{sender-username},"message":{text-message},"to":{room-code}}`
+
+![Diagram](../static/img/tutorial/flow-diagram.png)
 
 [1]: https://www.hivemq.com/blog/mqtt-essentials-part-5-mqtt-topics-best-practices/
