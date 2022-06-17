@@ -51,6 +51,12 @@ const config = {
           src: 'img/courier-logo.svg',
         },
         items: [
+          {
+            type: 'doc',
+            position: 'left',
+            docId: 'Introduction',
+            label: 'Tutorial',
+          },
           {to: '/blog', label: 'Blog', position: 'left'},
           {to: '/#docs', label: 'Libraries', position: 'left'},
         ],

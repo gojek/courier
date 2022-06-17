@@ -15,12 +15,12 @@
   width: 100%;
 }
 
-a {
+.post {
     text-decoration: none;
     color: var(--text-color);
 }
 
-a:hover {
+.post:hover {
     text-decoration: none;
     color: var(--text-color);
 }

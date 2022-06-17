@@ -1,4 +1,4 @@
-HOST: "broker.emqx.io"
+HOST: "broker.hivemq.com"
 PORT: 1883
 USERNAME: "COURIER"
 KEEPALIVE: 15s
