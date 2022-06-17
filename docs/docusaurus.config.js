@@ -59,6 +59,11 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {to: '/#docs', label: 'Libraries', position: 'left'},
+          {
+            href: 'https://github.com/gojek/courier',
+            label: 'GitHub',
+            position: 'right',
+          },
         ],
       },
       footer: {
@@ -75,16 +80,19 @@ const config = {
           {
             title: 'Community',
             items: [
+              { label: 'Gojek open source', href: 'https://github.com/gojek/', },
               { label: 'Discord', href: 'https://discord.gg/C823qK4AK7', },
-            ],
-          },
-          {
-            title: 'Resources',
-            items: [
-              { label: 'Blog', to: '/blog', },
+              { label: 'Twitter', href: 'https://twitter.com/gojektech', },
             ],
           },
         ],
+        logo: {
+          alt: 'Gojek Open Source Logo',
+          src: 'img/gojek-logo-white.png',
+          width: 250,
+          height: 50,
+          href: 'https://github.com/gojek/',
+        },
         copyright: `Copyright © ${new Date().getFullYear()} Gojek`,
       },
       prism: {
