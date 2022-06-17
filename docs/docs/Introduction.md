@@ -1,4 +1,4 @@
-# Tutorial
+# End-to-end chat example
 
 This tutorial will help you set up an end-to-end chat application for sending and receiving messages using the MQTT protocol.
 
