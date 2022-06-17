@@ -32,4 +32,6 @@ Once the backend application receives a message on the above topic, it parses th
 
 Message payload format: `{"from":{sender-username},"message":{text-message},"to":{room-code}}`
 
+![Diagram](../static/img/tutorial/flow-diagram.png)
+
 [1]: https://www.hivemq.com/blog/mqtt-essentials-part-5-mqtt-topics-best-practices/
