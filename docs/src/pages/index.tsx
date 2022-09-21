@@ -88,7 +88,7 @@ export default function Home(): JSX.Element {
                 title: 'Open Source',
                 content: (
                   <div>
-                    Open-source client libraries for GoLang, Android & iOS
+                    Open-source client libraries for GoLang, Android, iOS, & Flutter
                   </div>
                 ),
               },

@@ -40,6 +40,16 @@ const FeatureList: FeatureItem[] = [
     ),
     link: 'https://gojek.github.io/courier-iOS/'
   },
+  {
+    title: 'Courier-flutter',
+    Svg: require('@site/static/img/logo-flutter.svg').default,
+    description: (
+      <>
+        Dart Flutter library for creating long running connection using MQTT protocol
+      </>
+    ),
+    link: 'https://gojek.github.io/courier-flutter/'
+  },
 ];
 
 function Feature({title, Svg, description, link}: FeatureItem) {
