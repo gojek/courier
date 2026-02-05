@@ -51,16 +51,21 @@ const config = {
           src: 'img/courier-logo.svg',
         },
         items: [
+          {href: '/#docs', label: 'Projects', position: 'left'},
           {
             type: 'doc',
             position: 'left',
             docId: 'Introduction',
             label: 'Tutorial',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {to: '/#docs', label: 'Libraries', position: 'left'},
+          {to: '/blogs', label: 'Blogs', position: 'left'},
           {
-            href: 'https://github.com/gojek/courier',
+            href: 'https://discord.gg/C823qK4AK7',
+            label: 'Discord',
+            position: 'right',
+          },
+          {
+            href: 'https://github.com/gojek',
             label: 'GitHub',
             position: 'right',
           },
@@ -89,7 +94,7 @@ const config = {
             title: 'More',
             items: [
               { label: 'E2E example', to: '/docs/Introduction', },
-              { label: 'Blogs', to: '/blog', },
+              { label: 'Blogs', to: '/blogs', },
               { label: 'Github', href: 'https://github.com/gojek/courier', },
             ],
           },
