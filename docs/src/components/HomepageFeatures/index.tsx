@@ -15,7 +15,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/logo-golang.svg').default,
     description: (
       <>
-        Go package for creating long running connection using MQTT protocol
+        Go package for creating long running connections using MQTT protocol
       </>
     ),
     link: 'https://gojek.github.io/courier-go/'
@@ -25,7 +25,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/logo-android.svg').default,
     description: (
       <>
-        Android library for creating long running connection using MQTT protocol
+        Android library for creating long running connections using MQTT protocol
       </>
     ),
     link: 'https://gojek.github.io/courier-android/'
@@ -35,7 +35,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/logo-ios.svg').default,
     description: (
       <>
-        iOS library for creating long running connection using MQTT protocol
+        iOS library for creating long running connections using MQTT protocol
       </>
     ),
     link: 'https://gojek.github.io/courier-iOS/'
@@ -45,10 +45,20 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/logo-flutter.svg').default,
     description: (
       <>
-        Dart Flutter library for creating long running connection using MQTT protocol
+        Dart Flutter library for creating long running connections using MQTT protocol
       </>
     ),
     link: 'https://gojek.github.io/courier-flutter/'
+  },
+  {
+    title: 'Gojek\'s VerneMQ fork',
+    Svg: require('@site/static/img/logo-vernemq-fork.svg').default,
+    description: (
+      <>
+        Gojek's fork of VerneMQ as broker for handling long running connections using MQTT protocol
+      </>
+    ),
+    link: 'https://courier-gojek.gitbook.io/vernemq/'
   },
 ];
 
