@@ -4,7 +4,7 @@ import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  Svg: React.ComponentType<React.ComponentProps<'svg'>> | string;
   description: JSX.Element;
   link: string;
 };
@@ -52,7 +52,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Gojek\'s VerneMQ fork',
-    Svg: require('@site/static/img/logo-vernemq-fork.svg').default,
+    Svg: 'img/vernemq-fork.svg',
     description: (
       <>
         Gojek's fork of VerneMQ as broker for handling long running connections using MQTT protocol
@@ -65,9 +65,13 @@ const FeatureList: FeatureItem[] = [
 function Feature({title, Svg, description, link}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
+    <div className="text--center">
+      {typeof Svg === 'string' ? (
+        <img src={Svg} className={styles.featureSvg} role="img" alt={title} />
+      ) : (
         <Svg className={styles.featureSvg} role="img" />
-      </div>
+      )}
+    </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>
         <p>{description}</p>
