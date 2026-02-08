@@ -80,6 +80,7 @@ const config = {
               { label: 'Golang', href: 'https://github.com/gojek/courier-go' },
               { label: 'Android', href: 'https://github.com/gojek/courier-android' },
               { label: 'iOS', href: 'https://github.com/gojek/courier-iOS' },
+              { label: 'Gojek VerneMQ fork', href: 'https://github.com/gojek/vernemq' },
             ],
           },
           {
