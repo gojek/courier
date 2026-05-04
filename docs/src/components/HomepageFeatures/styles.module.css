@@ -5,6 +5,10 @@
   width: 100%;
 }
 
+.features :global(.col) {
+  margin-bottom: 3rem;
+}
+
 .featureSvg {
   height: 180px;
   width: 180px;
