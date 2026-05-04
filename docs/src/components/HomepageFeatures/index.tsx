@@ -51,6 +51,16 @@ const FeatureList: FeatureItem[] = [
     link: 'https://gojek.github.io/courier-flutter/'
   },
   {
+    title: 'Courier-Web',
+    Svg: 'img/logo-web.svg',
+    description: (
+      <>
+        TypeScript SDK for creating long running connections using MQTT protocol in web applications
+      </>
+    ),
+    link: 'https://gojek.github.io/courier-web/'
+  },
+  {
     title: 'Gojek\'s VerneMQ fork',
     Svg: 'img/vernemq-fork.svg',
     description: (
