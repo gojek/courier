@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
   <circle cx="90" cy="90" r="80" stroke="#00AA13" stroke-width="6" fill="none"/>
-  <circle cx="90" cy="90" r="80" stroke="#00AA13" stroke-width="6" fill="none" opacity="0.1" fill="#00AA13"/>
+  <circle cx="90" cy="90" r="80" stroke="#00AA13" stroke-width="4" fill="#00AA13" opacity="0.08"/>
   <ellipse cx="90" cy="90" rx="45" ry="80" stroke="#00AA13" stroke-width="4" fill="none"/>
   <ellipse cx="90" cy="90" rx="20" ry="80" stroke="#00AA13" stroke-width="3" fill="none"/>
   <line x1="10" y1="60" x2="170" y2="60" stroke="#00AA13" stroke-width="3"/>
   <line x1="10" y1="90" x2="170" y2="90" stroke="#00AA13" stroke-width="3"/>
   <line x1="10" y1="120" x2="170" y2="120" stroke="#00AA13" stroke-width="3"/>
-  <text x="90" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#00AA13">WEB</text>
+  <text x="90" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#00AA13">WEB</text>
 </svg>
