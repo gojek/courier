@@ -55,7 +55,7 @@ const FeatureList: FeatureItem[] = [
     Svg: 'img/logo-web.svg',
     description: (
       <>
-        TypeScript SDK for creating long running connections using MQTT protocol in web applications
+        TypeScript library for creating long running connections using MQTT protocol
       </>
     ),
     link: 'https://gojek.github.io/courier-web/'
